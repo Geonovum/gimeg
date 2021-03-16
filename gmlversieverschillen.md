@@ -1,7 +1,5 @@
 # GML 3.2.1 en GML 3.1.1
 
-<aside class="issue">De formatting in dit hoofdstuk moet nog gecorrigeerd wroden hier en daar (bv geneste lijsten gaan niet goed)</aside>
-
 In deze bijlage wordt ingegaan op de verschillen tussen de GML versies 3.2.1 en 3.1.1.
 
 ## Inleiding
@@ -39,23 +37,23 @@ Dit betekent dat alle componenten van GML nu in een andere namespace staan en du
 ### Abstracte elementen hernoemd
 De "_" (underscore) in element namen om aan te geven dat ze abstract zijn, is vervangen door het beginnen van de naam met "Abstract".
 
-Dit betekent dat bijvoorbeeld het GML element _Feature is hernoemd naar AbstractFeature.
+Dit betekent dat bijvoorbeeld het GML element `_Feature` is hernoemd naar `AbstractFeature`.
 - In GML application schemas die handmatig van 3.1.1 naar 3.2.1 gemigreerd worden, moet bij alle elementen die afgeleid zijn van een abstract GML element, de naam van het abstracte GML element worden gewijzigd.
 - Kan impact hebben op software.
 - Geen impact op GML documenten.
 
 ### gml:id verplicht
-GML objecten hebben identiteit en daarom is het attribuut gml:id verplicht geworden. Ook geometrieën zoals gml:Point, gml:Curve en gml:Surface worden in GML gezien als objecten en krijgen nu een verplicht gml:id.
+GML objecten hebben identiteit en daarom is het attribuut `gml:id` verplicht geworden. Ook geometrieën zoals `gml:Point`, `gml:Curve` en `gml:Surface` worden in GML gezien als objecten en krijgen nu een verplicht `gml:id`.
 
 Gevolgen:
-- Software die wordt gebruikt om GML documenten te maken, moet nu een gml:id aanmaken, met een binnen het document unieke waarde, voor elk GML object. In GML 3.1.1 hoefde dit niet en vaak werd dit dan ook niet gedaan voor objecten waarnaar niet werd verwezen, bijvoorbeeld voor een geometrie object binnen een feature.
-- GML documenten die van 3.1.1 naar 3.2.1 worden gemigreerd, moeten bij elk object dat nog geen gml:id had, er een toevoegen met een unieke waarde. Dit kan geautomatiseerd gedaan worden.
+- Software die wordt gebruikt om GML documenten te maken, moet nu een `gml:id` aanmaken, met een binnen het document unieke waarde, voor elk GML object. In GML 3.1.1 hoefde dit niet en vaak werd dit dan ook niet gedaan voor objecten waarnaar niet werd verwezen, bijvoorbeeld voor een geometrie object binnen een feature.
+- GML documenten die van 3.1.1 naar 3.2.1 worden gemigreerd, moeten bij elk object dat nog geen `gml:id` had, er een toevoegen met een unieke waarde. Dit kan geautomatiseerd gedaan worden.
 - Geen gevolgen voor GML application schemas.
 
-**Aanbeveling**: wie nu nog GML 3.1.1 gebruikt maar binnen afzienbare tijd naar GML 3.2.1 (of GML 3.3) wil overstappen, kan het beste vast beginnen het gml:id overal op te nemen waar dit in GML 3.2.1 verplicht wordt. 
+**Aanbeveling**: wie nu nog GML 3.1.1 gebruikt maar binnen afzienbare tijd naar GML 3.2.1 (of GML 3.3) wil overstappen, kan het beste vast beginnen het `gml:id` overal op te nemen waar dit in GML 3.2.1 verplicht wordt. 
 
 ### Feature collection en andere collection types geschrapt
-Alle in GML 3.1.1 aanwezige collection typen, inclusief die voor feature collections, zijn geschrapt. Het is nu de bedoeling date en GML application schema zelf een collection definieert als dit nodig is, met als basis de nieuwe typen gml:AbstractMemberType en gml:AbstractFeatureMemberType. 
+Alle in GML 3.1.1 aanwezige collection typen, inclusief die voor feature collections, zijn geschrapt. Het is nu de bedoeling date en GML application schema zelf een collection definieert als dit nodig is, met als basis de nieuwe typen `gml:AbstractMemberType` en `gml:AbstractFeatureMemberType`. 
 
 Dit heeft gevolgen voor alle GML toepassingen die collecties gebruiken. Zowel de software die collecties maakt of leest, als het GML applicatie schema en GML documenten moeten worden aangepast.
 
@@ -68,7 +66,7 @@ Een aantal van de normatieve verwijzingen naar aan GML gerelateerde standaard do
 - ISO/IEC 19757-3:2006, Document Schema Definition Languages (DSDL) — Part 3: Rule-based validation — Schematron. Er zijn verschillen tussen de hiervoor gebruikte versie en de in GML 3.2.1 gebruikte door ISO goedgekeurde versie.
 
 ### Metadata eigenschappen
-gml:_MetaData en gml:metaDataProperty zijn geschrapt en vervangen door een abstract property type als basis waarop men eigen metadata eigenschappen kan definiëren. Men kan nu daardoor in het eigen GML applicatie schema afdwingen dat metadata wordt ingevuld. Door het eigen metadata element af te leiden van het daarvoor bestemde abstracte GML element kan software de metadata herkennen.
+`gml:_MetaData` en `gml:metaDataProperty` zijn geschrapt en vervangen door een abstract property type als basis waarop men eigen metadata eigenschappen kan definiëren. Men kan nu daardoor in het eigen GML applicatie schema afdwingen dat metadata wordt ingevuld. Door het eigen metadata element af te leiden van het daarvoor bestemde abstracte GML element kan software de metadata herkennen.
 
 Gevolgen als deze GML 3.1.1 elementen gebruikt werden:
 - GML applicatie schema moet worden aangepast door het definiëren van een eigen metadata element dat volgens de GML 3.2.1 voorschriften is afgeleid van het abstracte GML type;
@@ -76,19 +74,19 @@ Gevolgen als deze GML 3.1.1 elementen gebruikt werden:
 - Software die van het GML 3.1.1 metadata element gebruik maakte moet gewijzigd worden om het zelf gedefinieerde metadata element te ondersteunen.
 
 ### Hernoemde / vervangen eigenschappen
-- Alle “*Name” elementen in het coordinate reference system schema zijn vervangen door gml:name en gebruiken nu dus gml:CodeType als type.
-  - gml:axisName >gml:axisLabel
-  - gml:fileName >gml:fileReference
-  - gml:SequenceRulesNames >gml:SequenceRuleEnumeration.
-- gml:StringOrRefType is geschrapt. Eigenschappen die een string of een verwijzing als inhoud hebben worden nu gecodeerd als twee aparte eigenschappen in plaats van één.
+  * Alle “*Name” elementen in het coordinate reference system schema zijn vervangen door `gml:name` en gebruiken nu dus `gml:CodeType` als type.
+    - `gml:axisName` > `gml:axisLabel`
+    - `gml:fileName` > `gml:fileReference`
+    - `gml:SequenceRulesNames` > `gml:SequenceRuleEnumeration`.
+  * `gml:StringOrRefType` is geschrapt. Eigenschappen die een string of een verwijzing als inhoud hebben worden nu gecodeerd als twee aparte eigenschappen in plaats van één.
 
 ### Wijzigingen in geometrietypen
 - Een aantal technische correcties zijn uitgevoerd op geometrietypen. Deze kunnen mogelijk gevolgen hebben voor software:
-  - Gml:Envelope is expliciet gedefinieerd als zijnde geen geometrie door het in de substitutionGroup AbstractObject te zetten.
-  - gml:CircleByCenterPointType is nu gedefinieerd als een restriction van
-ArcByCenterPointType.
-  - gml:Shell is toegevoegd als implementatie van ISO geometrietype GM_Shell.
-  - Het interpolationType attribuut ontbrak op sommige segment typen en is daar toegevoegd.
+  - `Gml:Envelope` is expliciet gedefinieerd als zijnde geen geometrie door het in de substitutionGroup `AbstractObject` te zetten.
+  - `gml:CircleByCenterPointType` is nu gedefinieerd als een restriction van
+`ArcByCenterPointType`.
+  - `gml:Shell` is toegevoegd als implementatie van ISO geometrietype `GM_Shell`.
+  - Het `interpolationType` attribuut ontbrak op sommige segment typen en is daar toegevoegd.
 
 ### Wijziging in coordinate reference system dictionaries
 De verwijzing in GML naar het gebruikte coördinaatreferentiesysteem (CRS) wordt meestal gedaan door de URN of EPSG code te gebruiken waaronder het bekend staat. Het is echter ook mogelijk de CRS expliciet te definiëren in een GML dictionary. Wie dit in GML 3.1.1 heeft gedaan, krijgt te maken met een wijziging die niet backwards compatible is.
@@ -96,9 +94,9 @@ De verwijzing in GML naar het gebruikte coördinaatreferentiesysteem (CRS) wordt
 De encoding is ingrijpend gewijzigd om te voldoen aan ISO 19111:2007 en de GML coderingsconventies.
 
 ### Ondersteuning voor Void (ISO/IEC 11404)
-Het weglaten van een kenmerk (middels minOccurs=”0” in het schema) is niet hetzelfde als Void zoals gedefinieerd in ISO/IEC 11404:1996. GML 3.2.1 is aangepast om Void correct te implementeren:
-- GML 3.2.1 is uitgebreid met een uitleg hoe xsi:nil moet worden gebruikt als implementatie van Void.
-- Gml:Null is geschrapt.
-- Het type gml:NilReasonType is toegevoegd voor het kunnen opnemen van metadata over de reden van een ontbrekende waarde.
+Het weglaten van een kenmerk (middels `minOccurs=”0”` in het schema) is niet hetzelfde als Void zoals gedefinieerd in ISO/IEC 11404:1996. GML 3.2.1 is aangepast om Void correct te implementeren:
+- GML 3.2.1 is uitgebreid met een uitleg hoe `xsi:nil` moet worden gebruikt als implementatie van Void.
+- `Gml:Null` is geschrapt.
+- Het type `gml:NilReasonType` is toegevoegd voor het kunnen opnemen van metadata over de reden van een ontbrekende waarde.
 
-Dit heeft gevolgen voor GML application schemas die gebruik maakten van gml:Null of een eigen implementatie van Void hanteerden. Het GML application schema, GML documenten en software die het GML application schema ondersteunt, moeten aangepast worden.
+Dit heeft gevolgen voor GML application schemas die gebruik maakten van `gml:Null` of een eigen implementatie van Void hanteerden. Het GML application schema, GML documenten en software die het GML application schema ondersteunt, moeten aangepast worden.
