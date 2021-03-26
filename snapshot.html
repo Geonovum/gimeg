@@ -672,7 +672,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </dd>
         </dl>
   <hr title="Separator for header">
-<div id="extwaiokist" style="display:none" v="pdbbg" q="87be75a1" c="238.9" i="245" u="1.649" s="03252116" d="1" w="false" e="" m="BMe=" vn="1gtra"><div id="extwaigglbit" style="display:none" v="pdbbg" q="87be75a1" c="238.9" i="245" u="1.649" s="03252116" d="1" w="false" e="" m="BMe="></div></div></div><section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Deze handreiking beschrijft de toepassing van geometrie in informatiemodellering en de implementatie daarvan in GML. Het is daarmee een ondersteuning voor de toepassing van de norm NEN 3610:2011 - Basismodel geo-informatie [<cite><a class="bibref" href="#bib-nen3610">NEN3610</a></cite>]. Deze handreiking is een webversie bedoeld als herpublicatie van het origineel gepubliceerd op 1 maart 2012: Handreiking Geometrie in model en GML, versie 1.0, 1 maart 2012. Deze versie is niet aangepast aan alle ontwikkelingen sinds 2012. De versie is wel nog steeds bruikbaar voor begrip en toepassing van geometrie.</p></section><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
+<div id="extwaiokist" style="display:none" v="pdbbg" q="87be75a1" c="238.9" i="245" u="1.733" s="03252116" d="1" w="false" e="" m="BMe=" vn="1gtra"><div id="extwaigglbit" style="display:none" v="pdbbg" q="87be75a1" c="238.9" i="245" u="1.733" s="03252116" d="1" w="false" e="" m="BMe="></div></div></div><section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Deze handreiking beschrijft de toepassing van geometrie in informatiemodellering en de implementatie daarvan in GML. Het is daarmee een ondersteuning voor de toepassing van de norm NEN 3610:2011 - Basismodel geo-informatie [<cite><a class="bibref" href="#bib-nen3610">NEN3610</a></cite>]. Deze handreiking is een webversie bedoeld als herpublicatie van het origineel gepubliceerd op 1 maart 2012: Handreiking Geometrie in model en GML, versie 1.0, 1 maart 2012. Deze versie is niet aangepast aan alle ontwikkelingen sinds 2012. De versie is wel nog steeds bruikbaar voor begrip en toepassing van geometrie.</p></section><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
     <em>Deze paragraaf beschrijft de status van dit document ten tijde van publicatie. Het is mogelijk dat er actuelere versies van dit document bestaan. Een lijst van Geonovum publicaties en de laatste gepubliceerde versie van dit document zijn te vinden op <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>.</em>
   </p><p>
 
@@ -1159,11 +1159,11 @@ globaal complexType dat een extensie is van <code>gml:AbstractFeatureType</code>
 <li>Clause 21.3.3:
 <ul><li>Voor elke klasse die een geo-object vertegenwoordigt moet een globaal complexType en een globaal element gedefinieerd zijn.</li>
 <li>Elk complexType voor een geo-object moet direct of indirect een extensie zijn van het type <code>gml:AbstractFeatureType</code>. <code>gml:AbstractFeatureType</code> is op zijn beurt een extensie van <code>gml:AbstractFeatureType</code>. Van dit type erven alle objecten het verplichte <code>gml:id</code> attribuut.</li>
-<li>Elk element in het schema voor een geo-object moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractFeature</code> (dat wil zeggen: moet zich direct of indirect in de <code>substitutionGroup=”gml:AbstractFeature”<code> bevinden).</code></code></li><code><code>
-      <li>Elk identificeerbaar object dat geen geo-object is, moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractGML<code>.</code></code></li></code></code></ul></li><code><code><code>
-  <li>Clause 21.3.4: Alle eigenschappen van een entiteit en alle relaties naar andere entiteiten worden opgenomen als child XML element.</li>
-  <li>Clause 21.2.7: Als de waarde van een eigenschap een enkelvoudige waarde is, moet deze als literal value worden opgenomen in het eigenschap element zonder verdere markup. Zie ook 7.2.3.10.
-  <div class="example" id="example-6">
+<li>Elk element in het schema voor een geo-object moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractFeature</code> (dat wil zeggen: moet zich direct of indirect in de <code>substitutionGroup=”gml:AbstractFeature”</code> bevinden).</li>
+<li>Elk identificeerbaar object dat geen geo-object is, moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractGML</code>.</li></ul></li>
+<li>Clause 21.3.4: Alle eigenschappen van een entiteit en alle relaties naar andere entiteiten worden opgenomen als child XML element.</li>
+<li>Clause 21.2.7: Als de waarde van een eigenschap een enkelvoudige waarde is, moet deze als literal value worden opgenomen in het eigenschap element zonder verdere markup. Zie ook 7.2.3.10.
+<div class="example" id="example-6">
           <div class="marker">
       <a class="self-link" href="#example-6">Voorbeeld 6</a>
     </div>
@@ -1174,10 +1174,10 @@ FOUT:
 <span class="hljs-tag">&lt;<span class="hljs-name">gml:value</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">gml:value</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">gml:Integer</span>&gt;</span></span>
   </code></pre>
-        </div></li>
-  <li>Clause 21.2.6: Het object property model moet gevolgd worden. Toelichting: GML is een objectenmodel. Dat wil zeggen dat alles is gemodelleerd als ofwel een object, ofwel een eigenschap van een object. Een relatie naar een ander object wordt ook gezien als eigenschap. Een object kan niet direct een ander object bevatten, maar een eigenschap kan wel een object bevatten. Dit wordt het object-property model genoemd. Als een eigenschap dus een complexe waarde heeft (structuur bezit) moet deze complexe waarde als apart object worden gedefinieerd. Een eigenschap mag zelf geen verdere structuur hebben. Het eigenschap element kan een verwijzing naar dit object bevatten of kan het als geneste structuur opnemen. Zie ook Clause 7.2.3.</li>
-  <li>Clause 21.2.1/21.3.4: Het gebruik van XML attributen is toegestaan (maar niet voor het opnemen van eigenschappen van objecten). Attributen worden niet in een namespace gedeclareerd met uitzondering van `gml:id`. Zie ook clause 7.1.3.</li>
-</code></code></code>
+        </div>
+</li>
+<li>Clause 21.2.6: Het object property model moet gevolgd worden. Toelichting: GML is een objectenmodel. Dat wil zeggen dat alles is gemodelleerd als ofwel een object, ofwel een eigenschap van een object. Een relatie naar een ander object wordt ook gezien als eigenschap. Een object kan niet direct een ander object bevatten, maar een eigenschap kan wel een object bevatten. Dit wordt het object-property model genoemd. Als een eigenschap dus een complexe waarde heeft (structuur bezit) moet deze complexe waarde als apart object worden gedefinieerd. Een eigenschap mag zelf geen verdere structuur hebben. Het eigenschap element kan een verwijzing naar dit object bevatten of kan het als geneste structuur opnemen. Zie ook Clause 7.2.3.</li>
+<li>Clause 21.2.1/21.3.4: Het gebruik van XML attributen is toegestaan (maar niet voor het opnemen van eigenschappen van objecten). Attributen worden niet in een namespace gedeclareerd met uitzondering van <code>gml:id</code>. Zie ook clause 7.1.3.</li>
 </ul></section></section><section id="voorbeeld" class="appendix"><!--OddPage--><h2 id="b-uitgewerkt-voorbeeld"><span class="secno">B. </span>Uitgewerkt voorbeeld</h2><p>In deze bijlage wordt aan de hand van een eenvoudig model de relatie tussen een UML een
 daarvan afgeleid XML Schema en een concreet GML document weergegeven.</p><section id="imgolf-model-in-uml"><h3 id="b-1-imgolf-model-in-uml"><span class="secno">B.1 </span>IMGolf model in UML</h3><figure id="fig-imgolf-klassediagram"><img src="media/imgolfdiagram.png" width="200">
 <figcaption>Figuur <span class="figno">13</span> <span class="fig-title">IMGolf klassediagram</span></figcaption>
