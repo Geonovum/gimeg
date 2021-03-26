@@ -1,8 +1,9 @@
 var respecConfig = {
-  specStatus: "GN-WV",
+  specStatus: "GN-DEF",
   specType: "HR",
+  subtitle: "Webversie als herpublicatie van het origineel: versie 1.0, 1 maart 2012",
   //canonicalURI: "WV",
-  //publishDate: "2012-03-01",
+  publishDate: "2021-03-26",
   maxTocLevel: 3,
   editors: [
     {
@@ -59,6 +60,14 @@ var respecConfig = {
       authors:["Clemens Portele", "Panagiotis (Peter) A. Vretanos", "Charles Heazel"],
       date:"14 oktober 2019",
       publisher:"Open Geospatial Consortium",
+    },
+    "NEN3610": {
+      id: "NEN 3610:2011 nl",
+      title: "NEN 3610:2011 nl - Basismodel geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten",
+      href: "https://www.nen.nl/NEN-Shop/Norm/NEN-36102011-nl.htm",
+      status: "Definitief",
+      publisher: "NEN",
+      date: "2011-03-01"
     },
   //  "ISO19136": {
   //    "href": "https://www.iso.org/standard/32554.html",

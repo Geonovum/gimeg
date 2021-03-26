@@ -29,9 +29,9 @@ De belangrijkste eisen aan GML Application schema's zijn:
   <li>Clause 21.2.3: Het GML application schema importeert het GML XML Schema.</li>
   <li>Clause 21.3.3:
   <ul><li>Voor elke klasse die een geo-object vertegenwoordigt moet een globaal complexType en een globaal element gedefinieerd zijn.</li>
-      <li>Elk complexType voor een geo-object moet direct of indirect een extensie zijn van het type `gml:AbstractFeatureType`. `AbstractFeatureType` is op zijn beurt een extensie van `AbstractGMLType`. Van dit type erven alle objecten het verplichte `gml:id` attribuut.</li>
-      <li>Elk element in het schema voor een geo-object moet lid zijn van de substitutionGroup voor het element `gml:AbstractFeature` (dat wil zeggen: moet zich direct of indirect in de substitutionGroup=”gml:AbstractFeature” bevinden).</li>
-      <li>Elk identificeerbaar object dat geen geo-object is, moet lid zijn van de substitutionGroup voor het element `gml:AbstractGML`.</li></ul></li>
+      <li>Elk complexType voor een geo-object moet direct of indirect een extensie zijn van het type <code>gml:AbstractFeatureType</code>. <code>gml:AbstractFeatureType</code> is op zijn beurt een extensie van <code>gml:AbstractFeatureType</code>. Van dit type erven alle objecten het verplichte <code>gml:id</code> attribuut.</li>
+      <li>Elk element in het schema voor een geo-object moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractFeature</code> (dat wil zeggen: moet zich direct of indirect in de <code>substitutionGroup=”gml:AbstractFeature”<code> bevinden).</li>
+      <li>Elk identificeerbaar object dat geen geo-object is, moet lid zijn van de substitutionGroup voor het element <code>gml:AbstractGML<code>.</li></ul></li>
   <li>Clause 21.3.4: Alle eigenschappen van een entiteit en alle relaties naar andere entiteiten worden opgenomen als child XML element.</li>
   <li>Clause 21.2.7: Als de waarde van een eigenschap een enkelvoudige waarde is, moet deze als literal value worden opgenomen in het eigenschap element zonder verdere markup. Zie ook 7.2.3.10.
   <pre class="example">

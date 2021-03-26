@@ -2,7 +2,7 @@
 # Inleiding
 Deze handreiking beschrijft de toepassing van geometrie in informatiemodellering en de
 implementatie daarvan in GML. Het is daarmee een ondersteuning voor de toepassing van de
-norm NEN 3610:2011 – Basismodel geo-informatie. NEN 3610 gaat hierin niet verder dan
+norm NEN 3610:2011 – Basismodel geo-informatie [[NEN3610]]. NEN 3610 gaat hierin niet verder dan
 verwijzing naar de relevante geo-informatie (ISO) normen. Voor het werkveld zijn deze normen
 niet toegankelijk genoeg om te kunnen toepassen. Middels deze handreiking wordt de brug
 gelegd. Dit document kan als een zelfstandig document worden gelezen. De inhoud is
@@ -41,12 +41,12 @@ en gehanteerd in de GML standaard.
 
 [Hoofdstuk 3](#gml) bevat een uitleg van het Simple Features profile for GML.
 
-[Hoofdstuk 4](?) beschrijft de Nederlandse toepassing van GML en het Simple Features profile en de regels die
+[Hoofdstuk 4](#gmlsf2) beschrijft de Nederlandse toepassing van GML en het Simple Features profile en de regels die
 daaruit voortvloeien.
 
 In [Hoofdstuk 5](#sf2tosf0) wordt tenslotte uitgelegd hoe, indien nodig, een aan Simple features level 2 voldoend
 informatiemodel kan worden omgezet naar een vereenvoudigd model dat voldoet aan level 0.
 
-De belangrijkste algemene GML coderingsregels staan beschreven in [Appendix 1](?), een uitgewerkt
-voorbeeld van de in dit document beschreven regels en werkwijze in [Appendix 2](?), en een overzicht van de
-verschillen tussen GML 3.1.1 en 3.2.1 in [Appendix 3](?).
+De belangrijkste algemene GML coderingsregels staan beschreven in [Appendix 1](#coderingsregels), een uitgewerkt
+voorbeeld van de in dit document beschreven regels en werkwijze in [Appendix 2](#voorbeeld), en een overzicht van de
+verschillen tussen GML 3.1.1 en 3.2.1 in [Appendix 3](#gmlversieverschillen).

@@ -1,6 +1,6 @@
 # Geometrie in GML - Nederlands profiel
 
-Het Nederlands Basismodel Geo-informatie (NEN 3610) specificeert in overeenstemming met de ISO-geo-informatiestandaarden GML (Geography Markup Language) als uitwisselingsformaat voor geo-informatie. De actuele standaard voor GML wordt gehanteerd. Op dit moment is dat GML 3.2.1, waarbij ook GML 3.1.1 nog ondersteund wordt. Omdat GML 3.2.1 een zeer uitgebreide standaard is wordt er een profiel, een subset gehanteerd.
+Het Nederlands Basismodel Geo-informatie (NEN 3610) specificeert in overeenstemming met de ISO-geo-informatiestandaarden GML (Geography Markup Language) als uitwisselingsformaat voor geo-informatie. De actuele standaard voor GML [[gml]] wordt gehanteerd. Op dit moment is dat GML 3.2.1, waarbij ook GML 3.1.1 nog ondersteund wordt. Omdat GML 3.2.1 een zeer uitgebreide standaard is wordt er een profiel, een subset gehanteerd.
 
 GML 3.2.1 is een uitgebreide standaard, ontwikkeld door het Open Geospatial Consortium (OGC) en biedt oplossingen voor een groot aantal situaties en variaties voor het uitwisselen van geo-informatie. Variaties zijn er in geometrietypen maar ook in complexiteit van datastructuren. Om verschillende niveaus van toepassing van GML 3.2.1 mogelijk te maken zijn er door OGC zogenaamde profielen gemaakt. De ontwikkeling van de profielen is voortgekomen uit een behoefte van onder meer softwareleveranciers om verschillende niveaus van complexiteit te ondersteunen. Operabiliteit kan daarmee beter gegarandeerd worden. De profielen omvatten elk een subset van de totale GML 3.2.1 standaard. De standaardprofielen zijn Simple Features Profile 0, Simple Features Profile 1 en Simple Features Profile 2 (afgekort tot respectievelijk SF0, SF1, en SF2). Deze profielen hebben een toenemende complexiteit en bieden ook een toenemende functionaliteit. SF0 is dus het eenvoudigst, en SF2 het meest uitgebreid. Het OGC Simple Features profile moet niet verward worden met de ISO 19125 - Simple feature access standaard. De eerste gaat over implementatie van geometrie in GML de tweede over definities van 2 dimensionale geometrietypen.
 
@@ -56,8 +56,8 @@ profielen.
 | Zelf ontwikkelde datatypen                         | nee                                                            | ja                                                             | ja                                                     |
 | Gebruik van nillable en xsi:nil                    | nee                                                            | ja                                                             | ja                                                     |
 | Cardinaliteit(multipliciteit)                      | 0 of 1                                                         | 0 tot onbeperkt                                                | 0 tot onbeperkt                                        |
-| Niet-ruimtelijke referenties                       | Ja, Alleen by reference (gml:ReferenceType)                    | Ja By reference (gml:ReferenceType) of inline                  | Ja By reference en inline in combinatie is mogelijk.   |
-| Ruimtelijke referenties                            | Ja, Alleen by reference (gml:ReferenceType)                    | Ja Alleen by reference (gml:ReferenceType)                     | Ja By reference en inline in combinatie is mogelijk.   |
+| Niet-ruimtelijke referenties                       | Ja, Alleen by reference (`gml:ReferenceType`)                    | Ja By reference (`gml:ReferenceType`) of inline                  | Ja By reference en inline in combinatie is mogelijk.   |
+| Ruimtelijke referenties                            | Ja, Alleen by reference (`gml:ReferenceType`)                    | Ja Alleen by reference (`gml:ReferenceType`)                     | Ja By reference en inline in combinatie is mogelijk.   |
 
 <a href="#geometrietypen">Tabel 2</a> geeft meer detail over de toegestane geometrietypen.
 
@@ -72,7 +72,7 @@ Voor **alle niveau’s (SF0, SF1 en SF2)** geldt bovendien dat de volgende GML o
 
 Verder geldt:
 
-- Het gebruik van Gml:metadataProperty is niet toegestaan. Men moet indien nodig zelf metadata elementen definiëren in een GML application schema.
+- Het gebruik van `gml:metadataProperty` is niet toegestaan. Men moet indien nodig zelf metadata elementen definiëren in een GML application schema.
 - In het GML application schema moet het compliance level op de voorgeschreven manier (zie <a href="#schema-compliance-data-levering-data-ontvangen"></a>) worden aangegeven.
 - In het GML application schema moet het volledige GML schema geïmporteerd worden (gml.xsd).
 - Een GML application schema mag maximaal één feature collection op de voorgeschreven manier (zie <a href="#feature-collecties"></a> definiëren.
