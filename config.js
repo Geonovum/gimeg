@@ -24,7 +24,7 @@ function custGHPG(respecConfig)
 }
 
 var respecConfig = {
-  specStatus: "GN-DEF",
+  specStatus: "GN-WV",
   specType: "HR",
   subtitle: "Webversie als herpublicatie van het origineel: versie 1.0, 1 maart 2012",
   //canonicalURI: "WV",
