@@ -151,7 +151,7 @@ Voor het representeren van geometrieën is de dimensionaliteit van groot belang.
 
 2D: Objecten bestaan uit punten, lijnen of vlakken. Coördinaten zijn een x en een y-waarde.
 
-2,5D: Punten, lijnen of vlakken. Coördinaten zijn een x,y en z waarde. Bij elk x,y-locatie is er maximaal één z-waarde beschikbaar. Dat betekent dat 2D geometrien zich in een 3D ruimte (x,y,z) bevinden maar dat de geometrien zichzelf of elkaar niet mogen overlappen in de horizontale projectie.
+2.5D: Punten, lijnen of vlakken. Coördinaten zijn een x,y en z waarde. Bij elk x,y-locatie is er maximaal één z-waarde beschikbaar. Dat betekent dat 2D geometrien zich in een 3D ruimte (x,y,z) bevinden maar dat de geometrien zichzelf of elkaar niet mogen overlappen in de horizontale projectie.
 
 3D: Volume eenheden oftewel ‘solids’ zijn onderdeel van de mogelijke geometrietypen. Bij elke x,y-locatie zijn er meerdere z-waarden mogelijk.
 
